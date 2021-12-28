@@ -22,8 +22,10 @@ struct ContentView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
                 
+                
             VStack {
                 Image("diceeLogo")
+                    .shadow(color: .green, radius: 15, x: 3, y: 3)
                 Spacer()
                 HStack {
                     DiceView(n: leftDiceNumber)
@@ -71,5 +73,7 @@ struct DiceView: View {
         Image("dice\(n)")
             .resizable()
             .aspectRatio(1, contentMode: .fit)
+            .shadow(color: .green, radius: 15, x: 3, y: 3)
+            
     }
 }
